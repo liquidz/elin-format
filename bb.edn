@@ -1,0 +1,23 @@
+{:paths ["elin"]
+ :deps {com.github.liquidz/vim-elin {:git/sha "c7e1b06537227f739bc19bf9f1a33eddb7adee0f"}}
+
+ :tasks
+ {lint {:doc "Clj-kondo linting"
+        :task (shell "clj-kondo --lint src:test")}
+
+  format-check {:doc "Cljstyle check"
+                :task (shell "cljstyle check")}
+
+  test {:doc "Run unit tests"
+        :extra-paths ["test"]
+        :extra-deps {io.github.cognitect-labs/test-runner {:git/tag "v0.5.1" :git/sha "dfb30dd"}}
+        :task (exec 'cognitect.test-runner.api/test)
+        :exec-args {:dirs ["test"]}
+        :org.babashka/cli {:coerce {:nses [:symbol]
+                                    :vars [:symbol]}}}
+
+  check-all {:doc "Check all"
+             :depends [lint format-check test]}
+
+  outdated {:doc "Check outdated dependencies"
+            :task (clojure "-Sdeps '{:deps {com.github.liquidz/antq {:mvn/version \"RELEASE\"}}}' -M -m antq.core --upgrade --skip=clojure-cli")}}}

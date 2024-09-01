@@ -1,0 +1,3 @@
+{:name "elin format code interceptor plugin"
+ :interceptors [elin-format.core/format-current-form-interceptor]}
+

@@ -1,0 +1,9 @@
+VIM_AUTO_RTP
+.DS_Store
+*.bk
+foo*
+cov
+.clj-kondo
+.cache
+.cpcache
+.nrepl-port

@@ -1,0 +1,6 @@
+= vim-elin formatting interceptor
+
+[source,clojure]
+----
+{:interceptor {:includes [[elin-format.core/format-current-form-interceptor "cljstyle" "pipe"]]}}
+----
