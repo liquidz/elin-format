@@ -1,4 +1,4 @@
-= vim-elin formatting interceptor
+= elin formatting interceptor
 
 [source,clojure]
 ----
