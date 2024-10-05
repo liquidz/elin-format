@@ -1,9 +1,9 @@
 {:paths ["elin"]
- :deps {com.github.liquidz/vim-elin {:git/sha "c7e1b06537227f739bc19bf9f1a33eddb7adee0f"}}
+ :deps {com.github.liquidz/vim-elin {:git/sha "f664cce9571835b33b21e5848a73febad393f65f"}}
 
  :tasks
  {lint {:doc "Clj-kondo linting"
-        :task (shell "clj-kondo --lint src:test")}
+        :task (shell "clj-kondo --lint elin")}
 
   format-check {:doc "Cljstyle check"
                 :task (shell "cljstyle check")}
