@@ -1,4 +1,26 @@
-= elin formatting interceptor
+= elin-format
+
+https://github.com/liquidz/elin[liquidz/elin] plugin for formatting.
+
+== Installation
+
+.vim-plug
+[source,vim]
+----
+Plug 'liquidz/elin-format'
+----
+
+.dein
+[source,vim]
+----
+call dein#add('liquidz/elin-format')
+----
+
+== Configuration
+
+=== format-current-form-interceptor
+
+This interceptor will format only the form on cursor when saving the file.
 
 [source,clojure]
 ----
