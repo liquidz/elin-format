@@ -16,8 +16,8 @@
         :org.babashka/cli {:coerce {:nses [:symbol]
                                     :vars [:symbol]}}}
 
-  check-all {:doc "Check all"
-             :depends [lint format-check test]}
+  check {:doc "Check all"
+         :depends [lint format-check test]}
 
   outdated {:doc "Check outdated dependencies"
             :task (clojure "-Sdeps '{:deps {com.github.liquidz/antq {:mvn/version \"RELEASE\"}}}' -M -m antq.core --upgrade --skip=clojure-cli")}}}
