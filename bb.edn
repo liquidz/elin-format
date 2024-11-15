@@ -5,8 +5,11 @@
  {lint {:doc "Clj-kondo linting"
         :task (shell "clj-kondo --lint elin")}
 
-  format-check {:doc "Cljstyle check"
-                :task (shell "cljstyle check")}
+  format-check {:doc "Check code formats"
+                :task (shell "npx @chrisoakman/standard-clojure-style check elin")}
+
+  format-fix {:doc "Fix code formats"
+              :task (shell "npx @chrisoakman/standard-clojure-style fix elin")}
 
   test {:doc "Run unit tests"
         :extra-paths ["test"]
