@@ -1,5 +1,5 @@
 {:paths ["elin"]
- :deps {com.github.liquidz/vim-elin {:git/sha "f664cce9571835b33b21e5848a73febad393f65f"}}
+ :deps {com.github.liquidz/vim-elin {:git/sha "24e0ebd8400bfa5b907fbb9d89d9ad835b5c8572"}}
 
  :tasks
  {lint {:doc "Clj-kondo linting"
